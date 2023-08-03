@@ -37,7 +37,8 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback {
 
 
     internal var mLocationCallback: LocationCallback = object : LocationCallback(){
-        override fun onLocationResult(locationResult: LocationResult?){
+        override fun onLocationResult(locationResult: LocationResult){
+            val ta =1
             val locationList = locationResult?.locations
             if(locationList!!.isNotEmpty()){
                 val location = locationList.last()
